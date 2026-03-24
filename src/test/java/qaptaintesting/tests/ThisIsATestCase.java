@@ -24,6 +24,8 @@ public class ThisIsATestCase {
 
         LetcodeInFormsPageObject letcodeInFormsPageObject = new LetcodeInFormsPageObject(driver);
         letcodeInFormsPageObject.fillFirstName("Quality");
+
+        letcodeInFormsPageObject.fillLastName("Testerino");
     }
 
     @AfterTest
