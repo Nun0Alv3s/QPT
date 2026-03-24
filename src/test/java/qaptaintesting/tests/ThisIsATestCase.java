@@ -28,6 +28,9 @@ public class ThisIsATestCase {
         letcodeInFormsPageObject.fillLastName("Testerino");
 
         letcodeInFormsPageObject.fillEmail("testi@c.de");
+
+        // Enter phone number as requested
+        letcodeInFormsPageObject.fillPhoneNumber("001 5555 1234");
     }
 
     @AfterTest
