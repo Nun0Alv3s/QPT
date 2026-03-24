@@ -18,6 +18,9 @@ public class LetcodeInFormsPageObject {
     @FindBy(xpath = "//*[@id='email']")
     protected WebElement emailInputField;
 
+    @FindBy(id = "Phno")
+    protected WebElement phoneNumberField;
+
     public LetcodeInFormsPageObject(WebDriver pDriver) {
         driver = pDriver;
         PageFactory.initElements(driver, this);
@@ -53,5 +56,15 @@ public class LetcodeInFormsPageObject {
     public void fillEmail(String email) {
         emailInputField.clear();
         emailInputField.sendKeys(email);
+    }
+
+    /**
+     * Fills the phone number field with the specified value.
+     *
+     * @param phoneNumber the phone number to enter (e.g., "001 9876 5432")
+     */
+    public void fillPhoneNumber(String phoneNumber) {
+        phoneNumberField.clear();
+        phoneNumberField.sendKeys(phoneNumber);
     }
 }
