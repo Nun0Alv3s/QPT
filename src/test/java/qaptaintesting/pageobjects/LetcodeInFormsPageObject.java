@@ -12,6 +12,9 @@ public class LetcodeInFormsPageObject {
     @FindBy(xpath = "//*[@id='firstname']")
     protected WebElement firstNameInput;
 
+    @FindBy(xpath = "//*[@id='lasttname']")
+    protected WebElement lastNameInput;
+
     public LetcodeInFormsPageObject(WebDriver pDriver) {
         driver = pDriver;
         PageFactory.initElements(driver, this);
@@ -27,5 +30,15 @@ public class LetcodeInFormsPageObject {
     public void fillFirstName(String value) {
         firstNameInput.clear();
         firstNameInput.sendKeys(value);
+    }
+
+    /**
+     * Fills the last name input field with the provided value.
+     *
+     * @param value the last name to enter (e.g., "TesterinoExample")
+     */
+    public void fillLastName(String value) {
+        lastNameInput.clear();
+        lastNameInput.sendKeys(value);
     }
 }
