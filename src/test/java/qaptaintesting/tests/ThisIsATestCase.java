@@ -31,6 +31,9 @@ public class ThisIsATestCase {
 
         // Enter phone number as requested
         letcodeInFormsPageObject.fillPhoneNumber("001 5555 1234");
+
+        // Click to agree to the Terms and Conditions checkbox
+        letcodeInFormsPageObject.setTermsAndConditionsCheckbox(true);
     }
 
     @AfterTest
