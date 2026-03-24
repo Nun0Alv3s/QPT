@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import qaptaintesting.pageobjects.LetcodeInTestPageObject;
+import qaptaintesting.pageobjects.LetcodeInFormsPageObject;
 
 public class ThisIsATestCase {
 
@@ -20,6 +21,9 @@ public class ThisIsATestCase {
 
         LetcodeInTestPageObject letcodeInTestPageObject = new LetcodeInTestPageObject(driver);
         letcodeInTestPageObject.clickFooterFirstLink();
+
+        LetcodeInFormsPageObject letcodeInFormsPageObject = new LetcodeInFormsPageObject(driver);
+        letcodeInFormsPageObject.fillFirstName("Quality");
     }
 
     @AfterTest
