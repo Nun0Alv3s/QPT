@@ -21,6 +21,9 @@ public class LetcodeInFormsPageObject {
     @FindBy(id = "Phno")
     protected WebElement phoneNumberField;
 
+    @FindBy(xpath = "/html[1]/body[1]/app-root[1]/app-forms[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[7]/div[1]/label[1]/input[1]")
+    protected WebElement termsAndConditionsCheckbox;
+
     public LetcodeInFormsPageObject(WebDriver pDriver) {
         driver = pDriver;
         PageFactory.initElements(driver, this);
@@ -66,5 +69,16 @@ public class LetcodeInFormsPageObject {
     public void fillPhoneNumber(String phoneNumber) {
         phoneNumberField.clear();
         phoneNumberField.sendKeys(phoneNumber);
+    }
+
+    /**
+     * Sets the checkbox to the desired checked state.
+     *
+     * @param shouldBeChecked true to ensure the checkbox is checked, false to ensure it is unchecked (e.g., true)
+     */
+    public void setTermsAndConditionsCheckbox(boolean shouldBeChecked) {
+        if (termsAndConditionsCheckbox.isSelected() != shouldBeChecked) {
+            termsAndConditionsCheckbox.click();
+        }
     }
 }
