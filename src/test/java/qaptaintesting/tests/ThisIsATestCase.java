@@ -26,6 +26,8 @@ public class ThisIsATestCase {
         letcodeInFormsPageObject.fillFirstName("Quality");
 
         letcodeInFormsPageObject.fillLastName("Testerino");
+
+        letcodeInFormsPageObject.fillEmail("testi@c.de");
     }
 
     @AfterTest
